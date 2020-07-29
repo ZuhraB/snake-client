@@ -1,13 +1,15 @@
-
+const net = require('net')
 const connect = function() {
-  let host = '135.23.222.131';
-  let port = 50541;
-  let obj = {
-    host,
-    port
-  } 
+  
   const conn = net.createConnection({ 
-    obj
+    host : '135.23.222.131',
+    port : 50541
   });
+
+conn.on('connect', function(){
+  console.log('Successfully connected to game server')
+  conn.write("Name: ZRB");
+})
+
 }
-module.exports = connect;
+module.exports = {connect};
