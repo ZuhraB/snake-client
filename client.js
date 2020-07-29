@@ -1,3 +1,4 @@
+const { IP, PORT } = require('./constants');
 const net = require('net')
 const connect = function() {
   
@@ -9,6 +10,7 @@ const connect = function() {
 conn.on('connect', function(){
   console.log('Successfully connected to game server')
   conn.write("Name: ZRB");
+  console.log("Handle w for up")
    
   })
 }
