@@ -9,7 +9,7 @@ const connect = function() {
 conn.on('connect', function(){
   console.log('Successfully connected to game server')
   conn.write("Name: ZRB");
-})
-
+   
+  })
 }
 module.exports = {connect};
